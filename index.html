@@ -89,7 +89,7 @@
 
 </div>
 <div class="col-sm-4">
-        <button type="button" id="btn-next" class="btn btn-primary">Next step</button>
+        <button type="button" id="btn-next" class="btn-lg btn-primary">Next step</button>
 </div>
 
 </div>
@@ -124,6 +124,12 @@
             $('#assessment').hide();
             $('#recommendation').show();
             $('#btn-next').text('Finish!');
+        }
+
+        if($('#btn-next').text()==='Finish!'&&nClicks>=5)
+        {
+            $('#btn-next').hide();
+            $('section > article').text('Recording completed').css('text-align','center').css('font-size','3em');
         }
 
 
