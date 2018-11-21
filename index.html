@@ -7,13 +7,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
 <body>
 
-    <header>ISBAR Training</header>
+        <i class="fa fa-undo" style="font-size: 3em; position: absolute; margin: 0.5em;"></i><br>
+
+    <header>
+        <span>ISBAR Training</span>
+    </header>
 
 
 
@@ -23,6 +27,10 @@
    
       
                 <div class="col-sm-4">
+                       <section id="microphone">
+                            <i class="fa fa-microphone" style="font-size: 5em; margin-left:0.2em;"></i><br>
+                        <span>Recording...</span>
+                    </section>
                 </div>
 
                 <div class="col-sm-4"> 
@@ -89,7 +97,7 @@
 
 </div>
 <div class="col-sm-4">
-        <button type="button" id="btn-next" class="btn-lg btn-primary">Next step</button>
+        <button type="button" id="btn-next" class="btn-lg btn-primary" style="background-color: #4588c7">Next step</button>
 </div>
 
 </div>
@@ -102,9 +110,6 @@
     $('#btn-next').on('click', function (event) {
         event.preventDefault();
         nClicks = nClicks + 1;
-        console.log(nClicks);
-
-        // What is the current parameter being shown ?
 
         if (nClicks == 1) {
             $('#identification').hide();
@@ -129,6 +134,7 @@
         if($('#btn-next').text()==='Finish!'&&nClicks>=5)
         {
             $('#btn-next').hide();
+            $('#microphone').hide();
             $('section > article').text('Recording completed').css('text-align','center').css('font-size','3em');
         }
 
