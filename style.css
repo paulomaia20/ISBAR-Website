@@ -1,0 +1,33 @@
+html body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #2e2e2e;
+    color: white;   
+    margin: 0;
+    padding: 0;
+}
+
+
+body> header{
+    font-size: 4em;
+    text-align: center;
+}
+
+section > article{
+    text-align: center;
+    padding: 0em;
+    margin: 0em;
+}
+
+li {
+    list-style-type:none;
+}
+
+section > .btn {
+    margin-top: 10em;
+    background-color: #41b198;
+    margin: 0;
+}
+
+#background, #situation, #assessment, #recommendation {
+display: none; 
+}

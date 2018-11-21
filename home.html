@@ -1,0 +1,137 @@
+<html lang="en-US">
+
+<head>
+    <title>SALUTEM</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <header>ISBAR Training</header>
+
+
+
+
+          <div class="row">
+   
+   
+      
+                <div class="col-sm-4">
+                </div>
+
+                <div class="col-sm-4"> 
+                <section>
+
+        <article id="identification">
+            <h1>Identification</h1> <br>
+            <ul>
+                <li>Full name, birth, gender and nationality of the patient</li>
+                <li> Name and function of the health professional</li>
+                <li> Service of origin / recipient</li>
+                <li> Name and function of the receiver health professional</li>
+            </ul>
+        </article>
+
+        <article id="situation">
+            <h1>Situation</h1> <br>
+            <ul>
+                <li>Date and time of admission</li>
+                <li>Description of the current reason for the need for healthcare</li>
+                <li>Complementary diagnostic and therapeutic means performed or to be performed</li>
+            </ul>
+        </article>
+
+        <article id="background">
+            <h1>Background</h1> <br>
+            <ul>
+                <li>Clinical history</li>
+                <li>Dependency levels</li>
+                <li>Advance directives of will</li>
+                <li>Known allergies or absence</li>
+                <li>Relevant habits</li>
+                <li>Outpatient therapy and adherence to it</li>
+                <li>Invasive techniques performed</li>
+                <li>Presence or risk of colonization / infection associated with health care and measures to be
+                    implemented</li>
+                <li>Identification of the social situation and empowerment of the caregiver</li>
+            </ul>
+        </article>
+
+        <article id="assessment">
+            <h1>Assessment</h1> <br>
+            <ul>
+                <li>Active problems</li>
+                <li>Therapeutic drug and non-drug therapy instituted</li>
+                <li>Focuses of attention, diagnosis and active interventions</li>
+                <li>Significant changes in health status and evaluation of the effectiveness of measures implemented</li>
+            </ul>
+        </article>
+
+        <article id="recommendation">
+            <h1>Recommendation</h1> <br>
+            <ul>
+                <li>Indication of continuity of care plan</li>
+                <li>Information about consultations</li>
+                <li>Identification of informal caregiver needs</li>
+            </ul>
+        </article>
+
+
+    </section>
+
+
+
+</div>
+<div class="col-sm-4">
+        <button type="button" id="btn-next" class="btn btn-primary">Next step</button>
+</div>
+
+</div>
+
+</body>
+
+<script>
+
+    var nClicks = 0;
+    $('#btn-next').on('click', function (event) {
+        event.preventDefault();
+        nClicks = nClicks + 1;
+        console.log(nClicks);
+
+        // What is the current parameter being shown ?
+
+        if (nClicks == 1) {
+            $('#identification').hide();
+            $('#situation').show();
+        }
+        else if (nClicks == 2) {
+            $('#situation').hide();
+            $('#background').show();
+        }
+
+        else if (nClicks == 3) {
+            $('#background').hide();
+            $('#assessment').show();
+        }
+
+        else {
+            $('#assessment').hide();
+            $('#recommendation').show();
+            $('#btn-next').text('Finish!');
+        }
+
+
+
+
+    }
+    );
+
+</script>
+
+</html>
