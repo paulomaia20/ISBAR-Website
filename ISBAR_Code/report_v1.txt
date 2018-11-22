@@ -1,0 +1,11 @@
+Final ISBAR Report
+Name: Tiago
+Number: 201607753
+University: FEUP
+
+The following ISBAR Parameters terms were identified
+Identification: ['Joana', 'enfermeira', 'sexo', 'feminino', '40', 'anos', 'paciente', 'Cátia', 'Silva']
+Situation: ['acabou', 'ser', 'submetido', 'uma', 'apendicectomia']
+Background: []
+Assessment: ['choque', 'hemorrágico', 'está', 'estável']
+Recommendation: ['necessitar', 'de', 'cirurgia', 'urgência']
