@@ -13,166 +13,45 @@
 
 <body>
 
-    <i class="fa fa-undo" style="font-size: 3em; position: absolute; margin: 0.5em;"></i><br>
-
     <header>
-        <span>ISBAR Training</span>
+        <span>salutem</span>
     </header>
 
-
-
-
     <div class="row">
+        <div id="user-info-main-page" class="col-sm-4">
+        <h1>John Doe</h1>
+        <h2>since 23/11/2018</h2>
+        <h3>Statistics:</h3>
+        <ul><li>Training Sessions: 5</li>
+        <li>Most failed parameter: Identification</li>
+        <li>Hours spent: 666</li>
 
+    </ul>
 
-
-        <div class="col-sm-4">
-            <section id="microphone">
-                <i class="fa fa-microphone" style="font-size: 5em; margin-left:1em;"></i><br>
-                
-                <div id='gUMArea' style="margin-right: 5em;">
-                        <div>
-                            <input style="display: none" type="radio" name="media" value="video" id='mediaVideo'>
-                            <input style="display: none" type="radio" name="media" checked value="audio">
-                        </div>
-                      <button class="btn btn-default" id='gUMbtn' class="btn-lg btn-primary" style="color: white; border: 0px; background-color: #4588c7">Set recording permissions</button>
-                    </div>
-
-            </section>
         </div>
 
         <div class="col-sm-4">
             <section>
 
-                <article style="display: none" id="identification">
-                    <h1>Identification</h1> <br>
+                <article id="main-page-center">
+                    <h1>Select your option</h1> <br>
                     <ul>
-                        <li>Full name, birth, gender and nationality of the patient</li>
-                        <li> Name and function of the health professional</li>
-                        <li> Service of origin / recipient</li>
-                        <li> Name and function of the receiver health professional</li>
+                        <li> <a href="assess.html"><i class="fa fa-arrow-right"></i> Recording with ISBAR Prompt</a></li>
+                        <li> <a href="#"><i class="fa fa-arrow-right"></i> Live ISBAR training</a></li>
+                        <li> <a href="help.html"><i class="fa fa-arrow-right"></i> Help</a> </li>
                     </ul>
                 </article>
 
-                <article id="situation">
-                    <h1>Situation</h1> <br>
-                    <ul>
-                        <li>Date and time of admission</li>
-                        <li>Description of the current reason for the need for healthcare</li>
-                        <li>Complementary diagnostic and therapeutic means performed or to be performed</li>
-                    </ul>
-                </article>
 
-                <article id="background">
-                    <h1>Background</h1> <br>
-                    <ul>
-                        <li>Clinical history</li>
-                        <li>Dependency levels</li>
-                        <li>Advance directives of will</li>
-                        <li>Known allergies or absence</li>
-                        <li>Relevant habits</li>
-                        <li>Outpatient therapy and adherence to it</li>
-                        <li>Invasive techniques performed</li>
-                        <li>Presence or risk of colonization / infection associated with health care and measures to be
-                            implemented</li>
-                        <li>Identification of the social situation and empowerment of the caregiver</li>
-                    </ul>
-                </article>
-
-                <article id="assessment">
-                    <h1>Assessment</h1> <br>
-                    <ul>
-                        <li>Active problems</li>
-                        <li>Therapeutic drug and non-drug therapy instituted</li>
-                        <li>Focuses of attention, diagnosis and active interventions</li>
-                        <li>Significant changes in health status and evaluation of the effectiveness of measures
-                            implemented</li>
-                    </ul>
-                </article>
-
-                <article id="recommendation">
-                    <h1>Recommendation</h1> <br>
-                    <ul>
-                        <li>Indication of continuity of care plan</li>
-                        <li>Information about consultations</li>
-                        <li>Identification of informal caregiver needs</li>
-                    </ul>
-                </article>
-
-                <div style="display: inline; padding-left: 1em; margin-left: 1em;">
-                    <ul style="display: inline;" class="list-unstyled" id='ul'></ul>
-                </div>
             </section>
-
-
-
         </div>
-        <div id='btns' class="col-sm-4">
-            <button type="button" id="start" class="btn-lg btn-primary" style="background-color: #4588c7">Start</button>
-            <button type="button" id="next" class="btn-lg btn-primary" style="display: none; background-color: #4588c7">Next</button>
-            <button type="button" id="stop" class="btn-lg btn-primary" style="display: none" id='stop'>Stop</button>
-
+        <div class="col-sm-4">
+            <!--Placeholder-->
         </div>
 
     </div>
 
-
- 
-
-
-
-
 </body>
 
-<script src="js/jquery-1.11.0.min.js"></script>
-<script src="script.js"></script>
-
-<script>
-
-    var nClicks = 0;
-    $('.btn-lg').on('click', function (event) {
-        console.log(nClicks);
-        event.preventDefault();
-        nClicks = nClicks + 1;
-
-        if (nClicks == 1) {
-            $('#start').hide();
-            $('#next').show();
-            $('#identification').show();
-        }
-        else if (nClicks == 2) {
-            $('#identification').hide();
-            $('#situation').show();
-        }
-        else if (nClicks == 3) {
-            $('#situation').hide();
-            $('#background').show();
-        }
-
-        else if (nClicks == 4) {
-            $('#background').hide();
-            $('#assessment').show();
-        }
-
-        else {
-            $('#assessment').hide();
-            $('#recommendation').show();
-            $('#next').hide();
-            $('#stop').show();
-        }
-
-        if (nClicks >= 6) {
-            $('#stop').hide();
-            $('#microphone').hide();
-            $('section > article').text('Recording completed').css('text-align', 'center').css('font-size', '3em');
-        }
-
-
-
-
-    }
-    );
-
-</script>
 
 </html>
