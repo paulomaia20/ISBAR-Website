@@ -1,0 +1,83 @@
+<html lang="en-US">
+
+<head>
+    <title>SALUTEM</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <a href="index.html"><i class="fa fa-undo" style="font-size: 3em; position: absolute; margin: 0.5em;"></i></a><br>
+
+    <header>
+        <span>ISBAR Training</span>
+    </header>
+
+
+
+
+    <div class="row">
+
+
+
+        <div class="col-sm-2">
+        </div>
+
+        <div class="col-sm-8 text-center">
+            <button type="button" id="start-connected-call" class="btn-lg btn-primary" style="margin-left: 3em; background-color: #4588c7">Start
+                call</button>
+
+            <section id="report" style="display: none">
+
+               <ul>
+                   <li> <p>I:</p> ['Joana', 'enfermeira', 'sexo', 'feminino', '40', 'anos', 'paciente', 'Cátia', 'Silva'] </li>
+                   <li> <p>S:</p> ['acabou', 'ser', 'submetido', 'uma', 'apendicectomia'] </li>
+                   <li> <p>B:</p> [ ] </li>
+                   <li> <p>A:</p> ['choque', 'hemorrágico', 'está', 'estável'] </li>
+                   <li> <p>R:</p> ['necessitar', 'de', 'cirurgia', 'urgência'] </li>
+
+               </ul>
+            </section>
+
+        </div>
+        <div id='btns' class="col-sm-2">
+
+        </div>
+
+    </div>
+
+</body>
+
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="script.js"></script>
+
+<script>
+
+    var nClicks = 0;
+
+    $('.btn-lg').on('click', function (event) {
+        console.log(nClicks);
+        event.preventDefault();
+        nClicks = nClicks + 1;
+
+        if (nClicks == 1) {
+            $('#start-connected-call').text("End call");
+        }
+        else {
+            $('#start-connected-call').hide();
+            $('#report').show();
+        }
+    
+
+    }
+    );
+
+</script>
+
+</html>
