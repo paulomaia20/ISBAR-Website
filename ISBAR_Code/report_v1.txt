@@ -1,7 +1,7 @@
 Final ISBAR Report
-Name: Tiago
-Number: 123456
-University: FEUP
+Name: tiago
+Number: 123
+University: feup
 
 The following ISBAR Parameters terms were identified
 Identification: ['Joana', 'enfermeira', 'sexo', 'feminino', '40', 'anos', 'paciente', 'Cátia', 'Silva']
